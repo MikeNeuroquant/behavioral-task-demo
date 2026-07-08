@@ -76,7 +76,7 @@ The scope is deliberately small. It was a course project, not a shipped product.
 
 Being honest about what you'd trip over if you tried to run this today:
 
-- **Path variables need configuring.** The original 2023 version used absolute paths at four points (main script and `final_accuracy.m`). Those have been replaced with `path/to/...` placeholders, so the code isn't runnable as-is. If I were rewriting this today I'd use `fileparts(mfilename('fullpath'))` with relative paths, but I've left the structure of the original code intact.
+- **Path variables need configuring.** The original 2023 version used absolute paths at four points (main script and `final_accuracy.m`). Those have been replaced with `path/to/...` placeholders, so the code isn't runnable as-is. 
 - **`checkword.m` isn't in this repo.** It's referenced by the word- and letter-spelling blocks in `main.m`. It was a helper that compared the typed response against the target and incremented the accuracy counter. If you want to run those two exercises, you'd need to reconstruct it as a two-line function that takes the typed word and the target, compares them with `strcmp`, and returns updated `accuracy` and `counter` values.
 
 ## Context
